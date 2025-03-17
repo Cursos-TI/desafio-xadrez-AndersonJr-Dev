@@ -1,0 +1,65 @@
+/**
+ * Programa: Simulação de Movimentos de Peças de Xadrez
+ * Descrição: Este programa simula o movimento de três peças de xadrez (Torre, Bispo e Rainha)
+ *            utilizando diferentes estruturas de repetição.
+ */
+
+#include <stdio.h>
+
+int main()
+{
+    // Definição das constantes para o número de casas a serem movidas
+    const int torre = 5;  // Torre move 5 casas para a direita
+    const int bispo = 5;  // Bispo move 5 casas na diagonal (cima e direita)
+    const int rainha = 8; // Rainha move 8 casas para a esquerda
+    const int cavalo = 3; // Cavalo move 3 casas em L
+
+    // Variável para controle dos loops
+    int i;
+
+    // Movimento da Torre (usando for)
+    printf("=== Movimento da Torre ===\n");
+    for (i = 0; i < torre; i++)
+    {
+        printf("Direita\n");
+    }
+
+    printf("\n");
+
+    // Movimento do Bispo (usando while)
+    printf("=== Movimento do Bispo ===\n");
+    i = 0;
+    while (i < bispo)
+    {
+        printf("Cima, Direita\n");
+        i++;
+    }
+
+    printf("\n");
+
+    // Movimento da Rainha (usando do-while)
+    printf("=== Movimento da Rainha ===\n");
+    i = 0;
+    do
+    {
+        printf("Esquerda\n");
+        i++;
+    } while (i < rainha);
+
+    printf("\n");
+
+    // Movimento do Cavalo baixo, baixo, direita (usando for aninhado)
+    printf("=== Movimento do Cavalo ===\n");
+    for (i = 0; i < 1; i++) // Executa apenas uma vez
+    {
+        int j = 0;
+        while (j < 2) // Movimento "Baixo" duas vezes
+        {
+            printf("Baixo\n");
+            j++;
+        }
+        printf("Esquerda\n"); // Movimento "Esquerda" uma vez
+    }
+
+    return 0;
+}
